@@ -11,7 +11,8 @@ label.pack(padx=20, pady=20)
 textbox = tk.Text(root, height=3, font=('Times New Roman', 16))
 textbox.pack()
 
-
+myentry = tk.Entry(root)
+myentry.pack()
 
 
 root.mainloop()
