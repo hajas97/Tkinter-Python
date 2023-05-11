@@ -11,6 +11,7 @@ class MyGUI:
         self.label.pack(padx=10, pady=10)
         
         self.textbox = tk.Text(self.root, height=5, font=('Arial', 16))
+        self.textbox.bind("<KeyPress>", self.shortcut)
         self.textbox.pack(padx=10, pady=10)
         
         self.check_state = tk.IntVar()
@@ -29,6 +30,15 @@ class MyGUI:
             print(self.textbox.get('1.0', tk.END))
         else:
             messagebox.showinfo(title="Message", message=self.textbox.get('1.0', tk.END))
+            
+    def shortcut(self, event):
+        # bitmask az enternek 8 
+        if event.state == 8 and event.keysym == "Return":
+            print("Helo")
+                    
+
+        
+        
     
     
         
