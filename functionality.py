@@ -34,13 +34,7 @@ class MyGUI:
     def shortcut(self, event):
         # bitmask az enternek 8 
         if event.state == 8 and event.keysym == "Return":
-            print("Helo")
-                    
-
-        
-        
-    
-    
+            self.show_message()
         
 MyGUI()
         
